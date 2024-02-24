@@ -3,13 +3,15 @@
 <?php
 require('./vendor/docopt/docopt/src/docopt.php');
 
-// short form (5.4 or better)
+require_once(__DIR__ . '/../src/getDiff.php');
+
+use function App\GetDiff\gendiff;
 
 $doc = <<<DOC
 Usage:
-  gendiff (-h|--help)
-  gendiff (-v|--version)
-  gendiff [--format <fmt>] <firstFile> <secondFile>
+    gendiff (-h|--help)
+    gendiff (-v|--version)
+    gendiff [--format <fmt>] <firstFile> <secondFile>
 
 Generate diff
 
@@ -20,9 +22,6 @@ Options:
 
 DOC;
 
-// $args = (new \Docopt\Handler)->handle($sdoc);
-
-// // long form, simple API (equivalent to short)
 $params = array(
     'argv'=>array_slice($_SERVER['argv'], 1),
     'help'=>true,
@@ -31,3 +30,7 @@ $params = array(
 );
 
 $args = Docopt::handle($doc, $params);
+
+$diff = gendiff($args['<firstFile>'], $args['<secondFile>']);
+
+print_r($diff);
