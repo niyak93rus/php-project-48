@@ -1,0 +1,15 @@
+{
+    "name": "hexlet/code",
+    "description": "2nd hexlet project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "NYakovlev",
+            "email": "n.yakovlev96@gmail.com"
+        }
+    ],
+    "require": {
+        "docopt/docopt": "^1.0"
+    },
+    "bin": ["gendiff.php"]
+}
