@@ -6,8 +6,8 @@ namespace App\GetDiff;
 
 function gendiff($pathToFile1, $pathToFile2)
 {
-    $json1 = file_get_contents("./{$pathToFile1}");
-    $json2 = file_get_contents("./{$pathToFile2}");
+    $json1 = file_get_contents($pathToFile1);
+    $json2 = file_get_contents($pathToFile2);
     $data1 = json_decode($json1, true);
     $data2 = json_decode($json2, true);
     
