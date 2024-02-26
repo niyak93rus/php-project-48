@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b984102e976503d46db699ad72367edf",
+    "content-hash": "0daf576c191859b6ec6d1721afc2de7d",
     "packages": [
         {
             "name": "docopt/docopt",
@@ -54,9 +54,49 @@
             "time": "2023-03-22T12:31:48+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "niyak/gendiff",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/niyak93rus/php-project-48.git",
+                "reference": "695226bfc451ed9284041fa33422282a674cca6e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/niyak93rus/php-project-48/zipball/695226bfc451ed9284041fa33422282a674cca6e",
+                "reference": "695226bfc451ed9284041fa33422282a674cca6e",
+                "shasum": ""
+            },
+            "require": {
+                "docopt/docopt": "^1.0"
+            },
+            "default-branch": true,
+            "bin": [
+                "gendiff.php"
+            ],
+            "type": "project",
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "NYakovlev",
+                    "email": "n.yakovlev96@gmail.com"
+                }
+            ],
+            "description": "2nd hexlet project",
+            "support": {
+                "issues": "https://github.com/niyak93rus/php-project-48/issues",
+                "source": "https://github.com/niyak93rus/php-project-48/tree/main"
+            },
+            "time": "2024-02-26T14:19:39+00:00"
+        }
+    ],
     "aliases": [],
-    "stability-flags": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "niyak/gendiff": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

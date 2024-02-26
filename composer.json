@@ -1,5 +1,5 @@
 {
-    "name": "niyak/gendiff",
+    "name": "hexlet/code",
     "description": "2nd hexlet project",
     "type": "project",
     "authors": [
@@ -11,5 +11,8 @@
     "require": {
         "docopt/docopt": "^1.0"
     },
-    "bin": ["gendiff.php"]
+    "bin": ["src/gendiff.php"],
+    "require-dev": {
+        "niyak/gendiff": "dev-main"
+    }
 }
