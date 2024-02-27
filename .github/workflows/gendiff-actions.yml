@@ -8,6 +8,6 @@ jobs:
       - name: Test code
         uses: actions/checkout@v4
       - run: make test
-      - name: List files in the repository
+      - name: Check linting
         run: make lint
       - run: echo "🍏 This job's status is ${{ job.status }}."
