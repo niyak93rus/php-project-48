@@ -1,9 +1,10 @@
 #!/usr/bin/env php
 
 <?php
-require('./vendor/docopt/docopt/src/docopt.php');
 
-require_once(__DIR__ . '/../src/getDiff.php');
+require './vendor/docopt/docopt/src/docopt.php';
+
+require_once __DIR__ . '/../src/getDiff.php';
 
 use function App\GetDiff\gendiff;
 
@@ -23,10 +24,10 @@ Options:
 DOC;
 
 $params = array(
-    'argv'=>array_slice($_SERVER['argv'], 1),
-    'help'=>true,
-    'version'=>1.0,
-    'optionsFirst'=>false,
+    'argv' => array_slice($_SERVER['argv'], 1),
+    'help' => true,
+    'version' => 1.0,
+    'optionsFirst' => false,
 );
 
 $args = Docopt::handle($doc, $params);

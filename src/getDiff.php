@@ -10,7 +10,7 @@ function gendiff($pathToFile1, $pathToFile2)
     $json2 = file_get_contents($pathToFile2);
     $data1 = json_decode($json1, true);
     $data2 = json_decode($json2, true);
-    
+
     $keys1 = array_keys($data1);
     $keys2 = array_keys($data2);
 
@@ -23,7 +23,11 @@ function gendiff($pathToFile1, $pathToFile2)
             if ($data1[$key] === $data2[$key]) {
                 return [$key => ['name' => $key, 'state' => 'equal', 'value' => $data1[$key]]];
             } else {
-                return [$key => ['name' => $key, 'state' =>'changed', 'oldValue' => $data1[$key], 'newValue' => $data2[$key]]];
+                return [
+                    $key => [
+                            'name' => $key, 'state' => 'changed', 'oldValue' => $data1[$key], 'newValue' => $data2[$key]
+                        ]
+                    ];
             }
         } else {
             if (in_array($key, $keys1)) {
