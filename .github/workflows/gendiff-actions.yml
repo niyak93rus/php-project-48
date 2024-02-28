@@ -1,0 +1,13 @@
+name: Gendiff Actions
+run-name: ${{ github.actor }} Gendiff Actions in progress 🚀
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test code
+        uses: actions/checkout@v4
+      - run: make test
+      - name: Check linting
+        run: make lint
+      - run: echo "🍏 This job's status is ${{ job.status }}."
