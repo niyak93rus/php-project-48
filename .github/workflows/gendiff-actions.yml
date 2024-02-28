@@ -1,4 +1,4 @@
-name: build
+name: Gendiff Actions
 on:
   push:
     branches:
