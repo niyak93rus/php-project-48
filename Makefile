@@ -1,5 +1,6 @@
 install:
 	composer install
+	composer update
 
 gendiff:
 	./bin/gendiff.php
