@@ -13,7 +13,6 @@ jobs:
       - run: yarn build
       - run: yarn test
         name: coverage
-        runs-on: ubuntu-latest
         steps:
         - shell: bash
         - uses: actions/checkout@main
