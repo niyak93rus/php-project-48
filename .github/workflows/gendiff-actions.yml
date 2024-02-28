@@ -13,20 +13,19 @@ jobs:
       - run: yarn build
       - run: yarn test
         name: coverage
-        steps:
-        - shell: bash
-        - uses: actions/checkout@main
-        - uses: actions/setup-node@main
-          with:
-            node-version: '12'
-        - run: npm install -g yarn
-        - run: yarn install
-        - run: yarn build
-        - uses: paambaati/codeclimate-action@v2.2.4
-          env:
-            CC_TEST_REPORTER_ID: ${{ secrets.codeclimatCoverage }}
-          with:
-            coverageCommand: yarn coverage
+      - shell: bash
+      - uses: actions/checkout@main
+      - uses: actions/setup-node@main
+        with:
+        node-version: '12'
+      - run: npm install -g yarn
+      - run: yarn install
+      - run: yarn build
+      - uses: paambaati/codeclimate-action@v2.2.4
+        env:
+        CC_TEST_REPORTER_ID: ${{ secrets.codeclimatCoverage }}
+        with:
+        coverageCommand: yarn coverage
       - name: Check linting
         run: make lint
       - run: echo "🍏 This job's status is ${{ job.status }}."
