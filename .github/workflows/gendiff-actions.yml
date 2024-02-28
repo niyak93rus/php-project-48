@@ -1,31 +1,47 @@
-name: Gendiff Actions
-run-name: ${{ github.actor }} Gendiff Actions in progress 🚀
-on: [push]
+name: build
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - '!*' # Do not execute on tags
+    paths:
+      - src/*
+      - test/*
+      - '*.json'
+      - yarn.lock
 jobs:
-  Explore-GitHub-Actions:
+  test:
+    strategy:
+      matrix:
+        platform: [ ubuntu-latest, macOS-latest ]
+        node: [ '12', '10' ]
+    name: test/node ${{ matrix.node }}/${{ matrix.platform }}
+    runs-on: ${{ matrix.platform }}
+    steps:
+    - uses: actions/checkout@main
+    - uses: actions/setup-node@main
+      with:
+        node-version: ${{ matrix.node }}
+    - run: npm install -g yarn
+    - run: make install
+    - run: yarn build
+    - run: make test
+    - run: make lint
+  coverage:
+    needs: [ test ]
+    name: coverage
     runs-on: ubuntu-latest
     steps:
-      - name: Test code
-        uses: actions/checkout@v4
-      - run: make test
-      - run: npm install -g yarn
-      - run: yarn install
-      - run: yarn build
-      - run: yarn test
-        name: coverage
-      - shell: bash
-      - uses: actions/checkout@main
-      - uses: actions/setup-node@main
-        with:
+    - uses: actions/checkout@main
+    - uses: actions/setup-node@main
+      with:
         node-version: '12'
-      - run: npm install -g yarn
-      - run: yarn install
-      - run: yarn build
-      - uses: paambaati/codeclimate-action@v2.2.4
-        env:
-        CC_TEST_REPORTER_ID: ${{ secrets.codeclimatCoverage }}
-        with:
+    - run: npm install -g yarn
+    - run: yarn install
+    - run: yarn build
+    - uses: paambaati/codeclimate-action@v2.2.4
+      env:
+        CC_TEST_REPORTER_ID: ${{ secrets.codeclimateCoverage }}
+      with:
         coverageCommand: yarn coverage
-      - name: Check linting
-        run: make lint
-      - run: echo "🍏 This job's status is ${{ job.status }}."
