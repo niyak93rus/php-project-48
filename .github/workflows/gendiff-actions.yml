@@ -8,7 +8,7 @@ jobs:
       - name: Test code
         uses: actions/checkout@v4
       - run: make test
-          steps:
+        steps:
           - uses: actions/checkout@main
           - uses: actions/setup-node@main
             with:
