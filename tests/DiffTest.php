@@ -13,6 +13,7 @@ class DiffTest extends TestCase
         $filepath1 = 'tests/fixtures/filepath1.json';
         $filepath2 = 'tests/fixtures/filepath2.json';
         $expected = file_get_contents(__DIR__ . '/fixtures/expected.txt');
+
         $this->assertEquals($expected, gendiff($filepath1, $filepath2));
     }
 }
