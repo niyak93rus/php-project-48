@@ -43,5 +43,5 @@ jobs:
             with:
               coverageCommand: yarn coverage
       - name: Check linting
-      - run: make lint
+        run: make lint
       - run: echo "🍏 This job's status is ${{ job.status }}."
