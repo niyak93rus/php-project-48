@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1742f5fa4acd4f6b86e4d34a5d747bd3",
+    "content-hash": "2d27f3896a5cb25bc5916b32354033b3",
     "packages": [
         {
             "name": "docopt/docopt",
@@ -171,42 +171,6 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v5.0.1"
             },
             "time": "2024-02-21T19:24:10+00:00"
-        },
-        {
-            "name": "niyak/gendiff",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/niyak93rus/php-project-48.git",
-                "reference": "07bdc365473e1b33e1bc7b0c4689bb2a957d8da3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/niyak93rus/php-project-48/zipball/07bdc365473e1b33e1bc7b0c4689bb2a957d8da3",
-                "reference": "07bdc365473e1b33e1bc7b0c4689bb2a957d8da3",
-                "shasum": ""
-            },
-            "require": {
-                "docopt/docopt": "^1.0"
-            },
-            "default-branch": true,
-            "bin": [
-                "src/gendiff.php"
-            ],
-            "type": "project",
-            "notification-url": "https://packagist.org/downloads/",
-            "authors": [
-                {
-                    "name": "NYakovlev",
-                    "email": "n.yakovlev96@gmail.com"
-                }
-            ],
-            "description": "2nd hexlet project",
-            "support": {
-                "issues": "https://github.com/niyak93rus/php-project-48/issues",
-                "source": "https://github.com/niyak93rus/php-project-48/tree/main"
-            },
-            "time": "2024-02-26T14:40:18+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -1798,9 +1762,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "niyak/gendiff": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
