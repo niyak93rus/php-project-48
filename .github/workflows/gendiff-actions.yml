@@ -14,11 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@main
     - uses: actions/setup-node@main
-      with:
-        node-version: ${{ matrix.node }}
-    - run: npm install -g yarn
     - run: make install
-    - run: yarn build
     - run: make test
     - run: make lint
   coverage:
@@ -27,14 +23,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@main
-    - uses: actions/setup-node@main
-      with:
-        node-version: '12'
-    - run: npm install -g yarn
-    - run: yarn install
-    - run: yarn build
     - uses: paambaati/codeclimate-action@v5.0.0
       env:
         CC_TEST_REPORTER_ID: ${{ secrets.codeclimateCoverage }}
       with:
-        coverageCommand: yarn coverage
+        coverageCommand: make test-coverage
+        coverageLocations: build/logs/clover.xml:clover
+        debug: true
