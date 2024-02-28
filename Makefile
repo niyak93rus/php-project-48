@@ -1,6 +1,6 @@
 install:
 	composer install
-	composer update
+	composer update --ignore-platform-reqs
 
 gendiff:
 	./bin/gendiff.php
