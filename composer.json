@@ -22,7 +22,6 @@
         "src/Diff.php"
     ],
     "require-dev": {
-        "niyak/gendiff": "dev-main",
         "squizlabs/php_codesniffer": "^3.9",
         "phpunit/phpunit": "^11.0"
     }
