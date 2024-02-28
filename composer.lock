@@ -178,12 +178,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/niyak93rus/php-project-48.git",
-                "reference": "695226bfc451ed9284041fa33422282a674cca6e"
+                "reference": "07bdc365473e1b33e1bc7b0c4689bb2a957d8da3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/niyak93rus/php-project-48/zipball/695226bfc451ed9284041fa33422282a674cca6e",
-                "reference": "695226bfc451ed9284041fa33422282a674cca6e",
+                "url": "https://api.github.com/repos/niyak93rus/php-project-48/zipball/07bdc365473e1b33e1bc7b0c4689bb2a957d8da3",
+                "reference": "07bdc365473e1b33e1bc7b0c4689bb2a957d8da3",
                 "shasum": ""
             },
             "require": {
@@ -191,7 +191,7 @@
             },
             "default-branch": true,
             "bin": [
-                "gendiff.php"
+                "src/gendiff.php"
             ],
             "type": "project",
             "notification-url": "https://packagist.org/downloads/",
@@ -206,7 +206,7 @@
                 "issues": "https://github.com/niyak93rus/php-project-48/issues",
                 "source": "https://github.com/niyak93rus/php-project-48/tree/main"
             },
-            "time": "2024-02-26T14:19:39+00:00"
+            "time": "2024-02-26T14:40:18+00:00"
         },
         {
             "name": "phar-io/manifest",
