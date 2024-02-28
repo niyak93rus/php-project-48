@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\GetDiff;
+namespace App\Diff;
 
 function gendiff($pathToFile1, $pathToFile2)
 {

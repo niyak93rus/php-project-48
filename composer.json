@@ -8,10 +8,18 @@
             "email": "n.yakovlev96@gmail.com"
         }
     ],
+    "autoload": {
+        "files": [
+            "src/Diff.php"
+        ]
+    },
     "require": {
         "docopt/docopt": "^1.0"
     },
     "bin": ["bin/gendiff.php"],
+    "files": [
+        "src/Diff.php"
+    ],
     "require-dev": {
         "niyak/gendiff": "dev-main",
         "squizlabs/php_codesniffer": "^3.9",
