@@ -14,7 +14,8 @@
         ]
     },
     "require": {
-        "docopt/docopt": "^1.0"
+        "docopt/docopt": "^1.0",
+        "php": ">=8.2"
     },
     "bin": ["bin/gendiff.php"],
     "files": [
