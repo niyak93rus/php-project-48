@@ -1,5 +1,5 @@
 install:
-	composer install
+	composer install --ignore-platform-reqs
 	composer update --ignore-platform-reqs
 
 gendiff:
