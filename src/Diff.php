@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace App\Diff;
 
-function gendiff($pathToFile1, $pathToFile2)
+function gendiff(string $pathToFile1, string $pathToFile2): string
 {
     $json1 = file_get_contents($pathToFile1);
     $json2 = file_get_contents($pathToFile2);

@@ -6,7 +6,7 @@ require './vendor/docopt/docopt/src/docopt.php';
 
 require_once __DIR__ . '/../src/Diff.php';
 
-use function App\GetDiff\gendiff;
+use function App\Diff\gendiff;
 
 $doc = <<<DOC
 Usage:
