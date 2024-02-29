@@ -14,9 +14,7 @@
         ]
     },
     "autoload-dev": {
-        "psr-4": {
-          "App\\": "tests"
-        }
+        "tests": "tests"
     },
     "bin": ["bin/gendiff.php"],
     "files": [
