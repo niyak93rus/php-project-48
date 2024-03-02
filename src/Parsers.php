@@ -6,9 +6,11 @@ namespace App\Parsers;
 
 use Symfony\Component\Yaml\Yaml;
 
-function parse(string $pathToFile): Array
+function parse(string $pathToFile): array
 {
     $file = file_get_contents($pathToFile);
+
+    $data = [];
 
     if (str_ends_with($pathToFile, '.json')) {
         $data = json_decode($file, true);

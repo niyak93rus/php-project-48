@@ -4,7 +4,7 @@
 
 require './vendor/docopt/docopt/src/docopt.php';
 
-require_once __DIR__ . '/../src/Diff.php';
+require_once __DIR__ . '/../src/Autoload.php';
 
 use function App\Diff\gendiff;
 

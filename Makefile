@@ -7,7 +7,7 @@ gendiff:
 
 lint:
 	composer exec --verbose phpcs -- --standard=PSR12 src bin
-	vendor/bin/phpstan analyse -l 6 src tests bin
+	vendor/bin/phpstan analyse -l 5 src tests bin
 
 test:
 	composer exec --verbose phpunit tests

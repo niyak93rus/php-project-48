@@ -6,7 +6,7 @@ namespace App\Diff;
 
 use function App\Parsers\parse;
 
-function printValue($value)
+function printValue(mixed $value): mixed
 {
     if ($value === true) {
         return 'true';
@@ -43,7 +43,7 @@ function gendiff(string $pathToFile1, string $pathToFile2): string
         } else {
             if (in_array($key, $keys1)) {
                 return [$key => [
-                    'name' => $key, 
+                    'name' => $key,
                     'state' => 'deleted',
                     'value' => printValue($data1[$key])
                 ]];
