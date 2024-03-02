@@ -5,7 +5,11 @@
 [![Gendiff Actions](https://github.com/niyak93rus/php-project-48/actions/workflows/gendiff-actions.yml/badge.svg)](https://github.com/niyak93rus/php-project-48/actions/workflows/gendiff-actions.yml)
 
 ### Asciinema
+## JSON
 <a href="https://asciinema.org/a/643330" target="_blank"><img src="https://asciinema.org/a/643330.svg" width="800" height="200" /></a>
+
+## YAML
+<a href="https://asciinema.org/a/644911" target="_blank"><img src="https://asciinema.org/a/644911.svg" width="800" height="200" /></a>
 
 ### CodeClimate Maintanability
 [![Maintainability](https://api.codeclimate.com/v1/badges/d0fbb201f9eb04e4216b/maintainability)](https://codeclimate.com/github/niyak93rus/php-project-48/maintainability)
