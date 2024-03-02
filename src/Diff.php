@@ -4,6 +4,17 @@ declare(strict_types=1);
 
 namespace App\Diff;
 
+function printValue($value)
+{
+    if ($value === true) {
+        return 'true';
+    } elseif ($value === false) {
+        return 'false';
+    } else {
+        return $value;
+    }
+}
+
 function gendiff(string $pathToFile1, string $pathToFile2): string
 {
     $json1 = file_get_contents($pathToFile1);
@@ -31,9 +42,13 @@ function gendiff(string $pathToFile1, string $pathToFile2): string
             }
         } else {
             if (in_array($key, $keys1)) {
-                return [$key => ['name' => $key, 'state' => 'deleted', 'value' => $data1[$key] ? 'true' : 'false']];
+                return [$key => [
+                    'name' => $key, 
+                    'state' => 'deleted',
+                    'value' => printValue($data1[$key])
+                ]];
             } else {
-                return [$key => ['name' => $key, 'state' => 'added', 'value' => $data2[$key] ? 'true' : 'false']];
+                return [$key => ['name' => $key, 'state' => 'added', 'value' => printValue($data2[$key])]];
             }
         }
     }, $allKeys);
