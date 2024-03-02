@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Diff;
 
+use function App\Parsers\parse;
+
 function printValue($value)
 {
     if ($value === true) {
@@ -17,10 +19,8 @@ function printValue($value)
 
 function gendiff(string $pathToFile1, string $pathToFile2): string
 {
-    $json1 = file_get_contents($pathToFile1);
-    $json2 = file_get_contents($pathToFile2);
-    $data1 = json_decode($json1, true);
-    $data2 = json_decode($json2, true);
+    $data1 = parse($pathToFile1);
+    $data2 = parse($pathToFile2);
 
     $keys1 = array_keys($data1);
     $keys2 = array_keys($data2);
